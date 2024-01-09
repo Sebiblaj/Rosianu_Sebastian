@@ -1,7 +1,5 @@
 package com.example.lool;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -15,17 +13,20 @@ public class LogIn implements Initializable {
     private Button logout;
 
     @FXML
-    private Label welcome;
+    private Label LOLHUB;
+
+    @FXML
+    private Button champions;
+
+    @FXML Button monsters;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        logout.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                DBUtils.changeScene(event,"hello-view.fxml",null,null);
-            }
-        });
+        logout.setOnAction(event -> DBUtils.changeScene(event,"hello-view.fxml",null,null,622,340));
+        champions.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"Champions.fxml",null,null,735,620));
+        monsters.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"monsters.fxml",null,null,735,620));
     }
-    public void setUserInformation(String username){
-        welcome.setText("Welcome "+username+" !");
+    public void setUserInformation(){
+        LOLHUB.setText("Welcome to League of Legends Hub !");
     }
 }

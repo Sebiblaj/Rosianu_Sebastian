@@ -32,7 +32,7 @@
         <Font size="14.0" />
       </font>
     </Button>
-    <CheckBox fx:id="remember" layoutX="43.0" layoutY="247.0" mnemonicParsing="false" style="-fx-background-color: #2D3447;" text="Remember Me" textFill="#ff0066" underline="true" />
+    <CheckBox fx:id="remember" layoutX="88.0" layoutY="247.0" mnemonicParsing="false" style="-fx-background-color: #2D3447;" text="Log In As Admin" textFill="#ff0066" underline="true" />
     <Button fx:id="forgotPassword" layoutX="66.0" layoutY="297.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="214.0" style="-fx-background-color: #FF0066;" text="Forgot Your Password?" textFill="WHITE" />
     <Label layoutX="66.0" layoutY="50.0" text="New member?" textFill="#a0a2ab" />
     <ImageView fx:id="image1" fitHeight="226.0" fitWidth="361.0" layoutX="280.0" layoutY="-20.0" pickOnBounds="true" preserveRatio="true">
@@ -56,7 +56,11 @@
       </image>
     </ImageView>
     <Label fx:id="invalidLogin" layoutX="90.0" layoutY="160.0" text="Invalid Log In! Please Try Again." textFill="#ff0066" />
+      <PasswordField fx:id="pin" alignment="CENTER" layoutX="3.0" layoutY="240.0" prefHeight="31.0" prefWidth="78.0" promptText="PIN" style="-fx-background-color: #2D3447; -fx-border-color: #FF0066;-fx-text-inner-color: #a0a2ab">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
   </children>
 
 </AnchorPane>
-

@@ -2,18 +2,107 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lool.LogIn">
+<AnchorPane prefHeight="620.0" prefWidth="735.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lool.LogIn">
     <children>
-        <Button fx:id="logout" layoutX="223.0" layoutY="24.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="154.0" style="-fx-background-color: #FF0066;" text="Log Out Here!" />
-        <Label fx:id="welcome" layoutX="190.0" layoutY="110.0" text="Welcome to my app!" textFill="#ff0066">
-            <font>
-                <Font size="24.0" />
-            </font>
-        </Label>
+      <Pane prefHeight="620.0" prefWidth="187.0" style="-fx-background-color: #2d3447;">
+         <children>
+              <Button fx:id="logout" layoutX="48.0" layoutY="567.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="104.0" style="-fx-background-color: #FF0066; -fx-border-color: #000000;" text="Log Out!">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Line endX="113.19998168945312" endY="-2.288818359375E-5" layoutX="74.0" layoutY="98.0" startX="-73.79999542236328" startY="-1.52587890625E-5" stroke="WHITE" />
+            <Button layoutX="41.0" layoutY="349.0" mnemonicParsing="false" style="-fx-background-color: #ff0066; -fx-border-color: #000000;" text=" My Champions" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="41.0" layoutY="405.0" mnemonicParsing="false" style="-fx-background-color: #ff0066; -fx-border-color: #000000;" text="Add champions" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="41.0" layoutY="463.0" mnemonicParsing="false" style="-fx-background-color: #ff0066; -fx-border-color: #000000;" text=" Game Tutorial ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Line endX="28.800010681152344" layoutX="122.0" layoutY="548.0" startX="-74.4000015258789" stroke="WHITE" />
+            <Label layoutX="151.0" layoutY="353.0" prefHeight="17.0" prefWidth="25.0" style="-fx-background-color: #ff0066; -fx-border-color: #000000;" text="0" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="LOLHUB" alignment="CENTER" layoutX="26.0" layoutY="203.0" prefHeight="107.0" prefWidth="135.0" text="Welcome to League of Legends Hub !" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="142.0" fitWidth="174.0" layoutX="7.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../League-of-Legends-Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+
+      <Button fx:id="champions" layoutX="240.0" layoutY="126.0" mnemonicParsing="false" prefHeight="146.0" prefWidth="202.0" style="-fx-background-color: #2d3447;" text="&#10;&#10;&#10;&#10;&#10;Champions" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+
+      <Button fx:id="monsters" layoutX="240.0" layoutY="333.0" mnemonicParsing="false" prefHeight="146.0" prefWidth="202.0" style="-fx-background-color: #2d3447;" text="&#10;&#10;&#10;&#10;&#10;Monsters" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="players" layoutX="495.0" layoutY="333.0" mnemonicParsing="false" prefHeight="146.0" prefWidth="202.0" style="-fx-background-color: #2d3447;" text="&#10;&#10;&#10;&#10;&#10;Players" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="tournaments" layoutX="495.0" layoutY="126.0" mnemonicParsing="false" prefHeight="146.0" prefWidth="202.0" style="-fx-background-color: #2d3447;" text="&#10;&#10;&#10;&#10;&#10;Tournaments" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="106.0" fitWidth="202.0" layoutX="241.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../LoL-Patch-Notes-category.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="107.0" fitWidth="202.0" layoutX="495.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="387.0" AnchorPane.leftAnchor="495.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="126.0">
+         <image>
+            <Image url="@../../../1920_40tzez71n2erk5frh82a-1200x630.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="107.0" fitWidth="202.0" layoutX="241.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../LOL_CMS_323_Tile_01-Feature_H20-V50-min_gwj2m1c4ci23voiis038-1200x630.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="107.0" fitWidth="202.0" layoutX="495.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../1200x630.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="187.0" layoutY="-2.0" prefHeight="70.0" prefWidth="558.0" style="-fx-background-color: #2d3447;">
+         <children>
+            <Label layoutX="244.0" layoutY="25.0" text="WELCOME!" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="187.0" layoutY="549.0" prefHeight="70.0" prefWidth="558.0" style="-fx-background-color: #2d3447;" />
     </children>
 </AnchorPane>
-

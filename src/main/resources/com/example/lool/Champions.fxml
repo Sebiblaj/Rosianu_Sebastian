@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="620.0" prefWidth="735.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lool.Champions">
+   <children>
+      <Pane layoutY="1.0" prefHeight="623.0" prefWidth="172.0" style="-fx-background-color: #2d3447;">
+         <children>
+            <Button fx:id="mainpage" layoutX="42.0" layoutY="561.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="88.0" style="-fx-background-color: #ff0066; -fx-border-color: #ffffff;" text="Main Page">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label fx:id="label1" layoutX="7.0" layoutY="196.0" prefHeight="231.0" prefWidth="159.0" text="These are the League of&#10; Legends champions.&#10; Pick one and review it , &#10;see its lore or obtain &#10;the best runes for it. &#10;Every League of Legends &#10;player should have this &#10;application , it's not only &#10;neccessary , but the ghost&#10;of Teemo will come and &#10;make you lose.&#10;Good luck in the game &#10;and stop feeding!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="105.0" fitWidth="172.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../League-of-Legends-Logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="-1.0" layoutY="444.0" text="Press on any champion to&#10;see their page.&#10;If you hate Teemo too, then &#10;go press the button below." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Line endX="100.0" endY="340.20001220703125" layoutX="71.0" layoutY="284.0" startX="100.0" startY="-283.0" stroke="#ff0066" />
+      <Button fx:id="ahri" layoutX="228.0" layoutY="130.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="100.0" style="-fx-background-color: #ff0066;" text="&#10;&#10;&#10;Ahri" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="67.0" fitWidth="100.0" layoutX="228.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Ahri_0.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="ashe" layoutX="631.0" layoutY="275.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="100.0" style="-fx-background-color: #ff0066;" text="&#10;&#10;&#10;Ashe" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="darius" layoutX="581.0" layoutY="413.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="100.0" style="-fx-background-color: #ff0066;" text="&#10;&#10;&#10;Darius" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="warwick" layoutX="581.0" layoutY="130.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="100.0" style="-fx-background-color: #ff0066;" text="&#10;&#10;&#10;Warwick" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="blitz" layoutX="399.0" layoutY="36.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="100.0" style="-fx-background-color: #ff0066;" text="&#10;&#10;&#10;Blitzcrank" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="miss" layoutX="228.0" layoutY="413.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="100.0" style="-fx-background-color: #ff0066;" text="&#10;&#10;&#10;Miss Fortune" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="teemo" layoutX="399.0" layoutY="274.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="100.0" style="-fx-background-color: #ff0066;" text="&#10;&#10;&#10;TEEMO" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="sion" layoutX="178.0" layoutY="274.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="100.0" style="-fx-background-color: #ff0066;" text="&#10;&#10;&#10;Sion" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="master" layoutX="399.0" layoutY="487.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="100.0" style="-fx-background-color: #ff0066;" text="&#10;&#10;&#10;Master Yi" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="67.0" fitWidth="100.0" layoutX="399.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Blitzcrank_0.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="67.0" fitWidth="100.0" layoutX="581.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Warwick_0.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="67.0" fitWidth="100.0" layoutX="631.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Ashe_0.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="67.0" fitWidth="100.0" layoutX="581.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Darius_0.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="67.0" fitWidth="100.0" layoutX="399.0" layoutY="487.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../MasterYi_0.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="67.0" fitWidth="100.0" layoutX="228.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../MissFortune_0.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="67.0" fitWidth="100.0" layoutX="178.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Sion_0.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="67.0" fitWidth="100.0" layoutX="399.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Teemo_0.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

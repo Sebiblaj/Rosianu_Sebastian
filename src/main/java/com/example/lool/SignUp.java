@@ -15,8 +15,6 @@ public class SignUp implements Initializable {
     @FXML
     private RadioButton female;
 
-    @FXML
-    private ToggleGroup gender;
 
     @FXML
     private Button login;
@@ -49,7 +47,7 @@ public class SignUp implements Initializable {
                 alert.show();
             }
         });
-        login.setOnAction(event -> DBUtils.changeScene(event,"hello-view.fxml",null,null));
+        login.setOnAction(event -> DBUtils.changeScene(event,"hello-view.fxml",null,null,622,340));
     }
 
 }
