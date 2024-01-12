@@ -7,7 +7,7 @@ import javafx.scene.control.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SignUp implements Initializable {
+public class SignUpAdmin implements Initializable {
 
     @FXML
     private TextField email;
@@ -15,9 +15,6 @@ public class SignUp implements Initializable {
     @FXML
     private RadioButton female;
 
-
-    @FXML
-    private Button login;
 
     @FXML
     private RadioButton male;
@@ -40,14 +37,14 @@ public class SignUp implements Initializable {
         signup.setOnAction(event -> {
             String toggleName = ((RadioButton) toggleGroup.getSelectedToggle()).getText();
             if (!username.getText().trim().isEmpty() && !password.getText().trim().isEmpty()) {
-                DBUtils.signUpUser(event,false, username.getText(), password.getText(), email.getText(), toggleName,"LogIn.fxml");
+                DBUtils.signUpUser(event,true, username.getText(), password.getText(), email.getText(), toggleName,"Admin.fxml");
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Please fill up all the fields");
                 alert.show();
             }
         });
-        login.setOnAction(event -> DBUtils.changeScene(event,"hello-view.fxml",null,null,622,340));
     }
 
 }
+

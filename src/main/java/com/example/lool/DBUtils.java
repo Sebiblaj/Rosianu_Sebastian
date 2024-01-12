@@ -1,13 +1,13 @@
 package com.example.lool;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -58,7 +58,7 @@ public class DBUtils {
         }
     }
 
-    public static void signUpUser(ActionEvent event, String username, String password, String email, String gender) throws AssertionError {
+    public static void signUpUser(ActionEvent event,boolean admin, String username, String password, String email, String gender,String fxml) throws AssertionError {
         Connection connection = null;
         PreparedStatement preparedStatement1 = null;
         PreparedStatement preparedStatement = null;
@@ -82,15 +82,8 @@ public class DBUtils {
                 preparedStatement.setString(2, password);
                 preparedStatement.setString(3, email);
                 preparedStatement.setString(4, gender);
-
-                // changeScene(event,"LogIn.fxml",username,password);
-                int rowsAffected = preparedStatement.executeUpdate();
-                if (rowsAffected > 0) {
-                    System.out.println("Data inserted successfully.");
-                    changeScene(event, "LogIn.fxml", username, password, 735, 620);
-                } else {
-                    System.out.println("Failed to insert data.");
-                }
+                preparedStatement.executeUpdate();
+                changeScene(event,fxml,null,null,735,620);
             }
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -476,5 +469,95 @@ public class DBUtils {
             try_catch(connection, preparedStatement, resultSet);
         }
     }
+    public static ObservableList<user> table() {
+        ObservableList<user> users = FXCollections.observableArrayList();
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            Class.forName("org.postgresql.Driver");
+            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "Sebilica09");
+            String selectQuery = "SELECT * FROM \"LoL-schema\".users";
+            preparedStatement = connection.prepareStatement(selectQuery);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                int userId = resultSet.getInt("userid");
+                String userName = resultSet.getString("username");
+                String userEmail = resultSet.getString("email");
+                String userPassword = resultSet.getString("password");
+                String userGender = resultSet.getString("gender");
+
+                user newUser = new user(userId, userName, userEmail, userPassword, userGender);
+                users.add(newUser);
+            }
+
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            try_catch(connection, preparedStatement, resultSet);
+        }
+
+        return users;
+    }
+    public static void deleteUser(user selectedUser) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            Class.forName("org.postgresql.Driver");
+            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "Sebilica09");
+
+            String deleteQuery = "DELETE FROM \"LoL-schema\".users WHERE userid = ?";
+            preparedStatement = connection.prepareStatement(deleteQuery);
+            preparedStatement.setInt(1, selectedUser.getUserid());
+
+            int rowsAffected = preparedStatement.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("User deleted successfully.");
+            } else {
+                System.out.println("User deletion failed. User not found or another issue.");
+            }
+
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            try_catch(connection, preparedStatement, null);
+        }
+    }
+    public static void updateUser(user updatedUser) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            Class.forName("org.postgresql.Driver");
+            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "Sebilica09");
+
+            String updateQuery = "UPDATE \"LoL-schema\".users SET username=?, email=?, password=?, gender=? WHERE userid=?";
+            preparedStatement = connection.prepareStatement(updateQuery);
+            preparedStatement.setString(1, updatedUser.getUsername());
+            preparedStatement.setString(2, updatedUser.getEmail());
+            preparedStatement.setString(3, updatedUser.getPassword());
+            preparedStatement.setString(4, updatedUser.getGender());
+            preparedStatement.setInt(5, updatedUser.getUserid());
+
+            int rowsAffected = preparedStatement.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("User updated successfully.");
+            } else {
+                System.out.println("User update failed. User not found or another issue.");
+            }
+
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            try_catch(connection, preparedStatement, null); // Pass null as resultSet for update operation
+        }
+    }
+
+
 }
 

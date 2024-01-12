@@ -1,111 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="620.0" prefWidth="735.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lool.Monsters">
    <children>
-      <GridPane alignment="CENTER_RIGHT" gridLinesVisible="true" layoutX="-1.0" prefHeight="620.0" prefWidth="735.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <ImageView fitHeight="133.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Capture92.JPG" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="97.0" fitWidth="198.0" layoutX="9.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
-               <image>
-                  <Image url="@../../../Capture93.JPG" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="100.0" fitWidth="227.0" layoutX="193.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
-               <image>
-                  <Image url="@../../../Capture94.JPG" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="100.0" fitWidth="237.0" layoutX="377.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
-               <image>
-                  <Image url="@../../../Capture95.JPG" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="133.0" fitWidth="183.0" layoutX="9.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@../../../Capture96.JPG" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="94.0" fitWidth="186.0" layoutX="9.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@../../../Capture97.JPG" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="97.0" fitWidth="183.0" layoutX="9.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@../../../LOL_CMS_165_Social_1200_uvxymaboxatdsatlqjwu.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="133.0" fitWidth="183.0" layoutX="9.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@../../../Capture99.JPG" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="108.0" fitWidth="203.0" layoutX="377.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@../../../Capture100.JPG" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="103.0" fitWidth="194.0" layoutX="9.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@../../../Capture101.JPG" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="133.0" fitWidth="183.0" layoutX="9.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@../../../Capture102.JPG" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="133.0" fitWidth="183.0" layoutX="9.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@../../../Capture103.JPG" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="133.0" fitWidth="183.0" layoutX="9.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@../../../Capture104.JPG" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="133.0" fitWidth="183.0" layoutX="9.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@../../../Capture105.JPG" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="105.0" fitWidth="189.0" layoutX="9.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@../../../Capture106.JPG" />
-               </image>
-            </ImageView>
-            <Button fx:id="goback" mnemonicParsing="false" style="-fx-background-color: #ff0066;" text="Go Back" GridPane.rowIndex="3">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </Button>
-         </children>
-      </GridPane>
+      <Button fx:id="goback" layoutX="14.0" layoutY="566.0" mnemonicParsing="false" style="-fx-background-color: #ff0066;" text="Go Back">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2d3447" height="250.0" layoutX="49.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="194.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2d3447" height="165.0" layoutX="277.0" layoutY="94.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="194.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2d3447" height="250.0" layoutX="506.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="194.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2d3447" height="250.0" layoutX="49.0" layoutY="310.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="194.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2d3447" height="250.0" layoutX="277.0" layoutY="310.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="194.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2d3447" height="250.0" layoutX="506.0" layoutY="310.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="194.0" />
+      <ImageView fitHeight="102.0" fitWidth="196.0" layoutX="277.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../LoL/src/main/resources/81ff68acf2342261f9a6528bed243f57118155f6-2560x1440.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="71.0" fitWidth="194.0" layoutX="506.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Capture109.JPG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="194.0" layoutX="49.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Capture110.JPG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="102.0" fitWidth="196.0" layoutX="276.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Capture113.JPG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="102.0" fitWidth="196.0" layoutX="505.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Capture112.JPG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="78.0" fitWidth="194.0" layoutX="49.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Capture108.JPG" />
+         </image>
+      </ImageView>
+      <Label layoutX="53.0" layoutY="90.0" prefHeight="175.0" prefWidth="186.0" text="The Fire Drake is a red Dragon that gives your whole team currently 8% more damage, but that will be changed to extra AD and AP once they release the elemental map. The Dragon soul gives every 3rd auto-attack or ability an AOE explosion that can deal a lot of damage depending on the user of it." textAlignment="CENTER" textFill="#ff0066" wrapText="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="510.0" layoutY="76.0" prefHeight="195.0" prefWidth="186.0" text="The whole terrain changes and it opens up the whole map. Bushes disappear  and the dragon pit opens up way more. Some walls around the map split up or disappear and make more space overall. This makes it for champions like Rengar really hard to play since there are fewer bushes to use in the jungle." textAlignment="CENTER" textFill="#ff0066" wrapText="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="364.0" prefHeight="195.0" prefWidth="186.0" text="This drake is currently Grants 7.5% bonus movement speed, doubled to 15% when out-of-combat. That will change a little bit once they release the new one since it will give slow resistance on top of that. The cloud soul will give a huge movement speed buff once you activate your ultimate." textAlignment="CENTER" textFill="#ff0066" wrapText="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="510.0" layoutY="384.0" prefHeight="175.0" prefWidth="186.0" text="The Ocean drake is currently granting 8% Physical Vamp and Magical Vamp. That will change completely and will be health regen. The cloud soul will give a huge movement speed buff once you activate your ultimate. The soul will be the one that is going to give Physical and Magical Vamp." textAlignment="CENTER" textFill="#ff0066" wrapText="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="281.0" layoutY="95.0" prefHeight="175.0" prefWidth="186.0" text="Taking the Baron Nashor in League of Legends is one of the hardest things a team can do. It usually requires the most cooperation between team mates, takes the longest time to kill, and is also one of the riskiest plays a team can make.The risk is worth it." textAlignment="CENTER" textFill="#ff0066" wrapText="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="281.0" layoutY="388.0" prefHeight="175.0" prefWidth="186.0" text="Slaying the Rift Herald drops the Eye of the Herald at the entrance of the pit, and grants a single-use Empowered Recall to the slayer and all of their allies who participated in the takedown. The trinket can be activated to summon an allied Rift Herald that pushes the nearest lane." textAlignment="CENTER" textFill="#ff0066" wrapText="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
