@@ -18,13 +18,19 @@ public class LogIn implements Initializable {
     @FXML
     private Button champions;
 
-    @FXML Button monsters;
-
+    @FXML
+    private Button monsters;
+    @FXML
+    private Button players;
+    @FXML
+    private Button tournaments;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         logout.setOnAction(event -> DBUtils.changeScene(event,"hello-view.fxml",null,null,622,340));
         champions.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"Champions.fxml",null,null,735,620));
         monsters.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"monsters.fxml",null,null,735,620));
+        players.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"Players.fxml",null,null,735,620));
+        tournaments.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent,"Tournaments.fxml",null,null,735,620));
     }
     public void setUserInformation(){
         LOLHUB.setText("Welcome to League of Legends Hub !");

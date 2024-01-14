@@ -26,7 +26,7 @@ public class Admin implements Initializable {
     @FXML
     private Button delete;
     @FXML
-    private TableView<user> table;  // Specify the type of TableView as user
+    private TableView<user> table;
     @FXML
     private TableColumn<user, Integer> userid;
     @FXML
