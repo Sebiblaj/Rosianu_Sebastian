@@ -23,12 +23,5 @@ public class HelloApplication extends Application {
     public static void main(String[] args) {
 
         launch();
-       /* DBConnection dbConnection=new DBConnection();
-        Connection connection=dbConnection.connect_to_db("postgres","postgres","Sebilica09");
-        dbConnection.insert_row(connection,"\"LoL-schema\".users","sebbbi","sebi.rosianu9@yahoo.com","1234","male");
-
-        dbConnection.read_data(connection,"\"LoL-schema\".users");
-
-        */
     }
 }

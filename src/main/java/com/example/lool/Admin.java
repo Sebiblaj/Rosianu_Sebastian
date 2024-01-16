@@ -1,11 +1,9 @@
 package com.example.lool;
 
+import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 
@@ -38,6 +36,12 @@ public class Admin implements Initializable {
     @FXML
     private TableColumn<user, String> gender;
     private List<user> modifiedUsers = new ArrayList<>();
+    @FXML
+    private TextField username_tf;
+    @FXML
+    private TextField email_tf;
+    @FXML
+    private TextField userid_tf;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         goback.setOnAction(actionEvent -> DBUtils.changeScene(actionEvent, "hello-view.fxml", null, null, 622, 340));
@@ -77,6 +81,24 @@ public class Admin implements Initializable {
 
         update.setOnAction(event -> handleUpdateButtonClick());
         table.setItems(DBUtils.table());
+
+        FilteredList<user> filteredList = new FilteredList<>(DBUtils.table(), p -> true);
+
+        // Add listeners to the text fields to update the filter when their values change
+        username_tf.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredList.setPredicate(user -> filterUser(user, newValue, email_tf.getText(), userid_tf.getText()));
+        });
+
+        email_tf.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredList.setPredicate(user -> filterUser(user, username_tf.getText(), newValue, userid_tf.getText()));
+        });
+
+        userid_tf.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredList.setPredicate(user -> filterUser(user, username_tf.getText(), email_tf.getText(), newValue));
+        });
+
+        // Set the filtered data to the table
+        table.setItems(filteredList);
 
     }
     private void handleEditCommit(TableColumn.CellEditEvent<user, String> event, String column) {
@@ -121,6 +143,12 @@ public class Admin implements Initializable {
         System.out.println("Update complete.");
 
         modifiedUsers.clear();
+    }
+    private boolean filterUser(user user, String usernameFilter, String emailFilter, String useridFilter) {
+        // Use the filters to check if the user should be included in the filtered list
+        return (usernameFilter == null || usernameFilter.isEmpty() || user.getUsername().toLowerCase().contains(usernameFilter.toLowerCase()))
+                && (emailFilter == null || emailFilter.isEmpty() || user.getEmail().toLowerCase().contains(emailFilter.toLowerCase()))
+                && (useridFilter == null || useridFilter.isEmpty() || String.valueOf(user.getUserid()).contains(useridFilter));
     }
 
 }

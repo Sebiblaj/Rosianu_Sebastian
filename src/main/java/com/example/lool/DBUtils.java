@@ -29,7 +29,6 @@ public class DBUtils {
         }
     }
 
-
     public static void changeScene(ActionEvent event, String fxmlFile, String username, String password, int v1, int v2) {
         Parent root = null;
         if (username != null && password != null) {
